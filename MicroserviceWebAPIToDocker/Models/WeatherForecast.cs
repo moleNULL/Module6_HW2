@@ -1,4 +1,4 @@
-namespace MicroserviceWebAPIToDocker
+namespace MicroserviceWebAPIToDocker.Models
 {
     public class WeatherForecast
     {

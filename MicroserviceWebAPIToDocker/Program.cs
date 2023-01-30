@@ -1,3 +1,15 @@
+﻿/*
+                                                   Задача
+
+● Завантажте приклад і запустіть його контейнером, щоб зрозуміти, як це працює. Пройти інструкцію з Readme.
+
+● Створіть своє рішення із болванкою під catalog MSS:
+    ○ для навчання давайте, зробимо 1 метод GET, який поверне нам список товарів вашого каталогу
+        (ніякий БД не потрібно, дані брати з масиву в контролері)
+● Додайте nginx новим розділом у файл docker-compose
+
+ */
+
 namespace MicroserviceWebAPIToDocker
 {
     public class Program
@@ -6,10 +18,8 @@ namespace MicroserviceWebAPIToDocker
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
-
+            // Add services to the container
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
@@ -22,10 +32,7 @@ namespace MicroserviceWebAPIToDocker
                 app.UseSwaggerUI();
             }
 
-            app.UseHttpsRedirection();
-
             app.UseAuthorization();
-
 
             app.MapControllers();
 
